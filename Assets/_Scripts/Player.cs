@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -22,7 +20,6 @@ public class Player : MonoBehaviour
             _light.intensity -= 0.16f;
             _health.CheckHP();
             other.GetComponent<Collider>().enabled = false;
-            Debug.Log(Health.hp);
         }
 
         if (other.gameObject.CompareTag("Bonus"))
@@ -38,7 +35,6 @@ public class Player : MonoBehaviour
                 _light.intensity += 0.16f;
             }
             _health.CheckHP();
-            Debug.Log(Health.hp);
         }
     }
 
